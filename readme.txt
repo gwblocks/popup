@@ -1,6 +1,6 @@
 === Popup ===
-Contributors: gwdev
-Tags: block, popup, gutenberg, editor, block-editor
+Contributors: yourusername
+Tags: block, popup, gutenberg, editor, block-editor, fse
 Tested up to: 6.7
 Requires at least: 6.0
 Stable tag: 0.1.0
@@ -15,10 +15,36 @@ This plugin provides a lightweight popup container block that can be triggered u
 
 == Features ==
 
-- Works with the core Button block
-- Decoupled trigger and popup container
-- No jQuery, no bloat
-- Lightweight CSS animations
+* Works with the core Button block
+* Decoupled trigger and popup container
+* No jQuery, no bloat
+* Lightweight CSS animations
+
+== Coming Soon ==
+
+* Keyboard navigation and Escape key support
+* Focus trapping and improved accessibility
+* Trigger on scroll
+* Additional animations (e.g. slide, bounce)
+* Improved dimension controls (custom width/height, max size, responsive behaviour)
+* Improved visibility and editing of popup container in the block editor
+
+== Usage ==
+
+1. Add a Popup Container block to your page.
+   - In the block's Advanced settings panel (in the sidebar), set an HTML Anchor.
+     For example: contact-popup
+
+2. Add a core Button block anywhere on the page.
+   - In the block settings, toggle "Enable popup trigger" to ON (this option is added by the plugin).
+   - In the Button's Advanced settings, set the "Rel" attribute to match the HTML Anchor of the popup container.
+
+Example:
+
+- Popup Container HTML Anchor: contact-popup  
+- Button Rel attribute: contact-popup
+
+When the button is clicked, it will trigger the matching popup container.
 
 == Installation ==
 
@@ -26,7 +52,7 @@ This plugin provides a lightweight popup container block that can be triggered u
 2. Copy the folder into one of the following locations:
    - `wp-content/plugins/`
    - or `wp-content/mu-plugins/` (for always-on usage).
-3. If installed in `plugins/`, activate via the WordPress admin under **Plugins**.
+3. If installed in `plugins/`, activate via the WordPress admin under Plugins.
 
 == Changelog ==
 
