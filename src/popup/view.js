@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const popup_close_buttons = document.querySelectorAll('.popup__content__close');
+  const popup_close_buttons = document.querySelectorAll('.popup-container__close');
 
   popup_close_buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
       e.preventDefault();
 
-      const popup = button.closest('.popup__content');
+      const popup = button.closest('.popup-container');
       if (popup) {
         popup.classList.remove('open');
       }
