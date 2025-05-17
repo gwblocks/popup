@@ -1,44 +1,28 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
+.popup-container {
+	content-visibility: auto;
+	position: fixed;
+	opacity: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale( 0.8 );
+	transition: opacity 0.3s, transform 0.3s;
+	width: auto;
+	height: auto;
+	padding: 2rem;
+	z-index: 1000;
+	box-shadow: var(--wp--preset--shadow--natural);
 
-.wp-block-create-block-popup {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
-}
-
-.popup {
-	&__content {
-		content-visibility: auto;
-		position: fixed;
-		opacity: 0;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%) scale( 0.8 );
-		transition: opacity 0.3s, transform 0.3s;
-		width: auto;
-		height: auto;
-		padding: 2rem;
-		z-index: 1000;
-		box-shadow: var(--wp--preset--shadow--natural);
-
-		&__close {
-			position: absolute;
-			top: 1rem;
-			right: 1rem;
-			background-color: transparent;
-			border: 0;
-			cursor: pointer;
-		}
-
-		&.open {
-			opacity: 1;
-			transform: translate(-50%, -50%) scale(1);
-		}
+	&__close {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		background-color: transparent;
+		border: 0;
+		cursor: pointer;
 	}
 
+	&.open {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
 }
