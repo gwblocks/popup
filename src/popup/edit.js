@@ -34,7 +34,10 @@ export default function Edit({ attributes }) {
 
 	return (	
 		<div className="popup__content" style="padding: 1rem" { ...useBlockProps() }>
-			<InnerBlocks />
+			<InnerBlocks
+				template={[['core/paragraph', { placeholder: 'Add popup content...' }]]}
+				templateLock={false}
+			/>
 		</div>
 	);
 }
