@@ -24,10 +24,7 @@ return array(
 		'viewScript' => 'file:./view.js',
 		'render' => 'file:./render.php',
 		'attributes' => array(
-			'buttonLabel' => array(
-				'type' => 'string',
-				'default' => 'Click here'
-			)
+			
 		)
 	)
 );

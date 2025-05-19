@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupId = button.getAttribute('rel');
     const popup = document.getElementById(popupId);
 
-    console.log(popupId)
-
     if (popup) {
       button.addEventListener('click', (e) => {
         e.preventDefault();

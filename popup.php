@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Popup
- * Description:       Example block scaffolded with Create Block tool.
+ * Description:       Createa popups triggered using core/button
  * Version:           0.1.1
  * Requires at least: 6.7
  * Requires PHP:      7.4

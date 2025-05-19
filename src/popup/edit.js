@@ -30,21 +30,10 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 export default function Edit() {
-
-	const blockProps = useBlockProps({
-		className: 'popup-container',
-		style: {
-			border: '2px dashed #999',
-			padding: '1rem',
-			minHeight: '100px',
-			backgroundColor: '#f9f9f9',
-		},
-	});
-
-	return (	
-		<div { ...blockProps }>
+	return (
+		<div { ...useBlockProps() }>
 			<InnerBlocks
-				template={[['core/paragraph', { placeholder: 'Add popup content...' }]]}
+				template={[['core/paragraph', { placeholder: 'Add popup content…' }]]}
 				templateLock={false}
 			/>
 		</div>
