@@ -1,5 +1,5 @@
 === Popup ===
-Contributors: yourusername
+Contributors: gwdev
 Tags: block, popup, gutenberg, editor, block-editor, fse
 Tested up to: 6.7
 Requires at least: 6.0
