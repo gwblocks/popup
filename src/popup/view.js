@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupId = button.getAttribute('rel');
     const popup = document.getElementById(popupId);
 
-    if (popup) {
+    if (popup) { // check buttons is associated with a popup container
       button.addEventListener('click', (e) => {
         e.preventDefault();
         popup.classList.toggle('open');

@@ -19,10 +19,11 @@ This plugin provides a lightweight popup container block that can be triggered u
 * Decoupled trigger and popup container
 * No jQuery, no bloat
 * Lightweight CSS animations
+* Escape key support
 
 == Coming Soon ==
 
-* Keyboard navigation and Escape key support
+* Keyboard navigation
 * Focus trapping and improved accessibility
 * Trigger on scroll
 * Additional animations (e.g. slide, bounce)
