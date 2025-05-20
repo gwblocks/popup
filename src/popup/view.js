@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('.has-popup a');
+  const body = document.querySelector('body');
 
   buttons.forEach((button) => {
     const popupId = button.getAttribute('rel');
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       button.addEventListener('click', (e) => {
         e.preventDefault();
         popup.classList.toggle('open');
+        body.classList.toggle('popup-active');
       });
     }
   });
@@ -22,8 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const popup = button.closest('.popup-container');
       if (popup) {
         popup.classList.remove('open');
+        body.classList.toggle('popup-active');
       }
     });
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      body.classList.remove('popup-active');
+      const popups = document.querySelectorAll('.popup-container.open');
+      popups.forEach((popup) => {
+        popup.classList.remove('open');
+      })
+    }
   });
 
 });
