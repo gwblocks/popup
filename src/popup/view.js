@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (popup) {
       popup.classList.remove('open');
       popup.setAttribute('aria-hidden', 'true');
+      // Wait for CSS transition to finish before hiding
+      setTimeout(() => {
+        popup.setAttribute('hidden', '');
+      }, 300); // 👈 match this to your CSS transition duration
     }
     if (body) {
       body.classList.remove('popup-active');
@@ -18,10 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (popup) { // check button is associated with a popup container
       button.addEventListener('click', (e) => {
         e.preventDefault();
-        popup.classList.toggle('open');
-        const isHidden = popup.getAttribute('aria-hidden') === 'true';
-        popup.setAttribute('aria-hidden', isHidden ? 'false' : 'true');
-        body.classList.toggle('popup-active');
+        popup.toggleAttribute('hidden');
+        requestAnimationFrame(() => {
+          popup.classList.toggle('open');
+          const isHidden = popup.getAttribute('aria-hidden') === 'true';
+          popup.setAttribute('aria-hidden', isHidden ? 'false' : 'true');
+          body.classList.toggle('popup-active');
+        })
       });
     }
   });
