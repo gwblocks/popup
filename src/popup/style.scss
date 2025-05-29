@@ -21,6 +21,7 @@ body.popup-active {
 	left: 50%;
 	width: auto;
 	height: auto;
+	max-height: 96vh;
 	padding: 2rem;
 	box-shadow: var(--wp--preset--shadow--natural);
 	background-color: #fff;

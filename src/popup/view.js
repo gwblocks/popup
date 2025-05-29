@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const body = document.querySelector('body');
+  const untrap = null;
 
   function closePopup(popup) {
     if (popup) {
@@ -8,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Wait for CSS transition to finish before hiding
       setTimeout(() => {
         popup.setAttribute('hidden', '');
+        if(untrap) untrap()
       }, 300); // 👈 match this to your CSS transition duration
     }
     if (body) {
@@ -22,13 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (popup) { // check button is associated with a popup container
       button.addEventListener('click', (e) => {
         e.preventDefault();
-        popup.toggleAttribute('hidden');
-        requestAnimationFrame(() => {
-          popup.classList.toggle('open');
-          const isHidden = popup.getAttribute('aria-hidden') === 'true';
-          popup.setAttribute('aria-hidden', isHidden ? 'false' : 'true');
-          body.classList.toggle('popup-active');
-        })
+        const isHidden = popup.hasAttribute('hidden');
+
+        if (isHidden) {
+          popup.removeAttribute('hidden');
+          requestAnimationFrame(() => {
+            popup.classList.add('open');
+            popup.setAttribute('aria-hidden', 'false');
+            body.classList.add('popup-active');
+            untrap = trapFocus(popup); // after showing and setting attributes
+          });
+        } else {
+          closePopup(popup)
+        }
+
       });
     }
   });
@@ -52,5 +61,44 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+function trapFocus(popup) {
+  const focusableSelectors = [
+    'a[href]', 'button:not([disabled])', 'textarea:not([disabled])',
+    'input:not([disabled])', 'select:not([disabled])',
+    '[tabindex]:not([tabindex="-1"])'
+  ];
+
+  const focusableElements = popup.querySelectorAll(focusableSelectors.join(','));
+  const firstEl = focusableElements[0];
+  const lastEl = focusableElements[focusableElements.length - 1];
+
+  function handleKeydown(e) {
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === firstEl) {
+          e.preventDefault();
+          lastEl.focus();
+        }
+      } else {
+        if (document.activeElement === lastEl) {
+          e.preventDefault();
+          firstEl.focus();
+        }
+      }
+    }
+  }
+
+  document.addEventListener('keydown', handleKeydown);
+
+  firstEl?.focus();
+
+  // Return a function to remove the event listener
+  return function untrapFocus() {
+    document.removeEventListener('keydown', handleKeydown);
+  };
+}
+
 
   
