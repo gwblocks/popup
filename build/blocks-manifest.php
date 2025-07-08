@@ -5,7 +5,7 @@ return array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'gw/popup-container',
-		'version' => '0.3.0',
+		'version' => '0.4.0',
 		'title' => 'Popup container',
 		'category' => 'design',
 		'icon' => 'feedback',

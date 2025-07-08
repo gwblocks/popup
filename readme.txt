@@ -43,7 +43,7 @@ This plugin provides a lightweight popup container block that can be triggered u
 Example:
 
 - Popup Container HTML Anchor: contact-popup  
-- Button Rel attribute: contact-popup
+- Button href: #contact-popup
 
 When the button is clicked, it will trigger the matching popup container.
 
