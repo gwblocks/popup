@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.querySelectorAll('.has-popup a').forEach((button) => {
-    const popupId = button.getAttribute('rel');
+    const popupId = button.getAttribute('href').replace('#', '');
     const popup = document.getElementById(popupId);
 
     if (popup) { // check button is associated with a popup container
