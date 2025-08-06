@@ -44,7 +44,7 @@ addFilter(
                 onChange={(value) =>
                   setAttributes({ enablePopup: value })
                 }
-                help="Uses the 'link rel' field in the advanced setting section to match a popup container ID"
+                help="Set the button link to match the HTML anchor of a popup container block (e.g. #contact-popup)"
               />
             </PanelBody>
           </InspectorControls>
