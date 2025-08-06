@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const body = document.querySelector('body');
-  const untrap = null;
+  let body = document.querySelector('body');
+  let untrap = null;
 
   function closePopup(popup) {
     if (popup) {
@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.querySelectorAll('.has-popup a').forEach((button) => {
-    const popupId = button.getAttribute('href').replace('#', '');
-    const popup = document.getElementById(popupId);
+    let popupId = button.getAttribute('href').replace('#', '');
+    let popup = document.getElementById(popupId);
 
     if (popup) { // check button is associated with a popup container
       button.addEventListener('click', (e) => {
         e.preventDefault();
-        const isHidden = popup.hasAttribute('hidden');
+        let isHidden = popup.hasAttribute('hidden');
 
         if (isHidden) {
           popup.removeAttribute('hidden');
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.popup-container__close').forEach((button) => {
     button.addEventListener('click', (e) => {
       e.preventDefault();
-      const popup = button.closest('.popup-container');
+      let popup = button.closest('.popup-container');
       if (popup) {
         closePopup(popup)
       }
