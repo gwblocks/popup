@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name:       Popup
- * Description:       Createa popups triggered using core/button
+ * Description:       A custom popup block designed for use with WordPress Full Site Editing. Trigger popups using core/button blocks with accessibility features like focus trapping.
  * Version:           0.1.1
  * Requires at least: 6.7
  * Requires PHP:      7.4
- * Author:            The WordPress Contributors
+ * Author:            Graeme White
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       popup

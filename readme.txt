@@ -33,12 +33,12 @@ This plugin provides a lightweight popup container block that can be triggered u
 == Usage ==
 
 1. Add a Popup Container block to your page.
-   - In the block's Advanced settings panel (in the sidebar), set an HTML Anchor.
-     For example: contact-popup
+   - In the block's "Advanced" settings panel (in the sidebar), set an HTML Anchor.
+     For example: `contact-popup`
 
 2. Add a core Button block anywhere on the page.
-   - In the block settings, toggle "Enable popup trigger" to ON (this option is added by the plugin).
-   - In the Button's Advanced settings, set the "Rel" attribute to match the HTML Anchor of the popup container.
+   - In the block settings, toggle **Enable popup trigger** to ON (this option is added by the plugin).
+   - Set the button's link to an internal anchor, e.g. `#contact-popup`
 
 Example:
 

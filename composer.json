@@ -1,7 +1,7 @@
 {
     "name": "gwblocks/popup",
     "type": "wordpress-plugin",
-    "description": "A popup container block for WordPress full site editing.",
+    "description": "A custom popup block designed for use with WordPress Full Site Editing. Trigger popups using core/button blocks with accessibility features like focus trapping.",
     "license": "GPL-2.0-or-later",
     "authors": [
       {
