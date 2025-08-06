@@ -1,0 +1,15 @@
+{
+    "name": "gwblocks/popup",
+    "type": "wordpress-plugin",
+    "description": "A popup container block for WordPress full site editing.",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+      {
+        "name": "Graeme White",
+        "email": "contact@graemewhite.dev",
+        "homepage": "https://graemewhite.dev"
+      }
+    ],
+    "require": {}
+  }
+  
