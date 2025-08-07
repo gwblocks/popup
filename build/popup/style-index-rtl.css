@@ -1,1 +1,1 @@
-.popup-container{opacity:0;transition:opacity .5s ease-in-out}.popup-container__close{background-color:transparent;border:0;cursor:pointer;position:absolute;left:1rem;top:1rem}.popup-container[open]{opacity:1}@starting-style{.popup-container[open]{opacity:0}}
+dialog.popup-container{opacity:0;transition:opacity .5s ease-in-out}dialog.popup-container__close{background-color:transparent;border:0;cursor:pointer;position:absolute;left:1rem;top:1rem}dialog.popup-container[open]{opacity:1}@starting-style{dialog.popup-container[open]{opacity:0}}

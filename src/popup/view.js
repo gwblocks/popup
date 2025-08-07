@@ -19,17 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
 
-      // Ignore external links or empty href
-      if (!href || !href.startsWith('#')) return;
+        if (!href || !href.startsWith('#')) return;
 
-      const targetId = href.slice(1); // remove #
-      const targetDialog = document.getElementById(targetId);
+        e.preventDefault(); // Prevent default link behavior (page jump)
 
-      // If matching dialog found, prevent default and show popup/modal
-      if (targetDialog && targetDialog.tagName.toLowerCase() === 'dialog') {
-        e.preventDefault();
-        targetDialog.showModal();
-      }
+        const targetId = href.slice(1); // remove #
+        const innerDivWithId = document.getElementById(targetId);
+
+        if (innerDivWithId) {
+            // Find the closest parent <dialog> element
+            const parentDialog = innerDivWithId.closest('dialog');
+
+            if (parentDialog && typeof parentDialog.showModal === 'function') {
+                parentDialog.showModal(); // Open the modal dialog
+            }
+        }
     });
   });
 });
