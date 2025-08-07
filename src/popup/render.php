@@ -1,7 +1,6 @@
 <?php
 $wrapper_attributes = get_block_wrapper_attributes(['class' => 'popup-container']);
 ?>
-
 <dialog <?php echo wp_kses_post($wrapper_attributes); ?>>
     <?php echo wp_kses_post($content) ?>
     <button class="popup-container__close" aria-label="Close popup">

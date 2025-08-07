@@ -1,7 +1,16 @@
 dialog.popup-container {
 	transition: opacity 0.5s ease-in-out;
-    opacity: 0;
+	opacity: 0;
 
+	&[open] {
+		opacity: 1; /* Final state when open */
+		@starting-style {
+			opacity: 0; /* Starting point for opening animation */
+		}
+	}
+}
+
+.popup-container  {
 	&__close {
 		position: absolute;
 		top: 1rem;
@@ -9,12 +18,5 @@ dialog.popup-container {
 		background-color: transparent;
 		border: 0;
 		cursor: pointer;
-	}
-
-	&[open] {
-		opacity: 1; /* Final state when open */
-		@starting-style {
-			opacity: 0; /* Starting point for opening animation */
-		}
 	}
 }
