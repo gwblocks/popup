@@ -39,7 +39,7 @@ addFilter(
           <InspectorControls>
             <PanelBody title="Popup Settings">
               <ToggleControl
-                label="Enable popup trigger"
+                label="Trigger popup when button is clicked?"
                 checked={enablePopup}
                 onChange={(value) =>
                   setAttributes({ enablePopup: value })
