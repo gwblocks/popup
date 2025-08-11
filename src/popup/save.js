@@ -20,11 +20,12 @@ export default function save({attributes}) {
 	const { anchor } = attributes;
 
 	const blockProps = useBlockProps.save({
-		id: anchor
+		id: anchor,
+		className: 'popup-container__content'
 	});
 
 	return (
-		<div { ...blockProps } >
+		<div { ...blockProps } style={{ display: 'none' }}>
 			<InnerBlocks.Content />
 		</div>
 	);

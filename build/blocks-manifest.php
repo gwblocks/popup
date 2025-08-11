@@ -24,7 +24,10 @@ return array(
 		'viewScript' => 'file:./view.js',
 		'render' => 'file:./render.php',
 		'attributes' => array(
-			
+			'blurBackground' => array(
+				'type' => 'boolean',
+				'default' => false
+			)
 		)
 	)
 );

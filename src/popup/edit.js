@@ -11,7 +11,10 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
+import { InnerBlocks, useBlockProps, InspectorControls } from '@wordpress/block-editor';
+
+import { PanelBody, ToggleControl } from '@wordpress/components';
+
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -29,13 +32,35 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit({ attributes, setAttributes }) {
+
+	const { blurBackground, anchor } = attributes;
+
 	return (
+		<>
+		<InspectorControls>
+            <PanelBody title="Popup Container Settings">
+              <ToggleControl
+                label="Blur background?"
+                checked={blurBackground}
+                onChange={(value) =>
+                  setAttributes({ blurBackground: value })
+                }
+                help="When the modal is open blur background?"
+              />
+            </PanelBody>
+          </InspectorControls>
 		<div { ...useBlockProps() }>
+			{ !anchor && (
+			<div className="components-notice">
+				Set the same HTML anchor on this block and on your trigger button to open this popup.
+			</div>
+			) }
 			<InnerBlocks
 				template={[['core/paragraph', { placeholder: 'Add popup content…' }]]}
 				templateLock={false}
 			/>
 		</div>
+		</>
 	);
 }
