@@ -13,7 +13,8 @@ import { __ } from '@wordpress/i18n';
  */
 import { InnerBlocks, useBlockProps, InspectorControls } from '@wordpress/block-editor';
 
-import { PanelBody, ToggleControl } from '@wordpress/components';
+import { PanelBody, ToggleControl, __experimentalNumberControl as NumberControl } from '@wordpress/components';
+
 
 
 /**
@@ -40,13 +41,15 @@ export default function Edit({ attributes, setAttributes }) {
 		<>
 		<InspectorControls>
             <PanelBody title="Popup Container Settings">
-              <ToggleControl
-                label="Blur background?"
-                checked={blurBackground}
-                onChange={(value) =>
-                  setAttributes({ blurBackground: value })
+              <NumberControl
+                label="Blur background (px)?"
+                value={blurBackground}
+				max={100}
+				min={1}
+                onChange={(newValue) =>
+                  setAttributes({ blurBackground: +newValue })
                 }
-                help="When the modal is open blur background?"
+                help="Blur level for the modal backdrop. 0 = no blur."
               />
             </PanelBody>
           </InspectorControls>

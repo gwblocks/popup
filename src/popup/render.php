@@ -1,5 +1,7 @@
 <?php
-$wrapper_attributes = get_block_wrapper_attributes(['class' => 'popup-container']);
+$blur_background  = is_numeric($attributes['blurBackground']) ? $attributes['blurBackground'] : 0;
+$style = '--dialog-backdrop-blur: ' . $blur_background .'px;';
+$wrapper_attributes = get_block_wrapper_attributes(['class' => 'popup-container' , 'style' => $style]);
 ?>
 <dialog <?php echo wp_kses_post($wrapper_attributes); ?>>
     <?php echo wp_kses_post($content) ?>

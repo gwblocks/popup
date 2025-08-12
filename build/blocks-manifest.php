@@ -9,7 +9,7 @@ return array(
 		'title' => 'Popup container',
 		'category' => 'design',
 		'icon' => 'feedback',
-		'description' => 'Popup triggered by a button set to popup trigger.',
+		'description' => 'A popup activated by a button set as its trigger.',
 		'example' => array(
 			
 		),
@@ -25,8 +25,8 @@ return array(
 		'render' => 'file:./render.php',
 		'attributes' => array(
 			'blurBackground' => array(
-				'type' => 'boolean',
-				'default' => false
+				'type' => 'number',
+				'default' => 0
 			)
 		)
 	)
