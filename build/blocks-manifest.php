@@ -17,7 +17,7 @@ return array(
 			'html' => false,
 			'anchor' => true
 		),
-		'textdomain' => 'popup',
+		'textdomain' => 'gw-fse-block-popup',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',

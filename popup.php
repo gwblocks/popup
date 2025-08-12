@@ -10,7 +10,7 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       gw-fse-block-popup
  *
- * @package CreateBlock
+ * @package GW_FSE_Block_Popup
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
