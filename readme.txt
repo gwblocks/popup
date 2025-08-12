@@ -1,8 +1,8 @@
-=== Popup ===
+=== GW FSE Block Popup ===
 Contributors: gwdev
-Tags: block, popup, gutenberg, editor, block-editor, fse
-Tested up to: 6.7
-Requires at least: 6.0
+Tags: block, popup, gutenberg, editor, fse
+Tested up to: 6.8
+Requires at least: 6.8
 Stable tag: 0.5.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html

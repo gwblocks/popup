@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name:       GW FSE Block Popup
- * Description:       A custom popup block designed for use with WordPress Full Site Editing. Trigger popups using core/button blocks with accessibility features like focus trapping.
+ * Description:       A custom popup block for WordPress Full Site Editing. Trigger popups using core Button blocks, opening an HTML5 <dialog> element.
  * Version:           0.5.0
- * Requires at least: 6.7
+ * Requires at least: 6.8
  * Requires PHP:      7.4
  * Author:            Graeme White
  * License:           GPL-2.0-or-later
