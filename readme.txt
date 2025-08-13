@@ -7,11 +7,11 @@ Stable tag: 0.5.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A lightweight, dependency-free popup block built for the WordPress block editor (FSE compatible). Uses native blocks like Button for triggering, and keeps layout clean, accessible, and native to Gutenberg.
+A lightweight, popup block built for the WordPress block editor (FSE compatible).
 
 == Description ==
 
-This plugin provides a lightweight popup container block that can be triggered using the core Button block. Designed with accessibility and native WordPress workflows in mind, it requires no jQuery and works seamlessly within Full Site Editing themes.
+A custom popup block for WordPress Full Site Editing. Trigger popups using core Button blocks, opening an HTML5 <dialog> element.
 
 == Features ==
 

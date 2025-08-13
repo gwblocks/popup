@@ -35,7 +35,7 @@ import './editor.scss';
  */
 export default function Edit({ attributes, setAttributes }) {
 
-	const { blurBackground, anchor } = attributes;
+	const { blurBackground, anchor, showCloseButton } = attributes;
 
 	return (
 		<>
@@ -50,6 +50,19 @@ export default function Edit({ attributes, setAttributes }) {
                   setAttributes({ blurBackground: +newValue })
                 }
                 help="Blur level for the modal backdrop. 0 = no blur."
+              />
+
+			<ToggleControl
+                label="Show Close Button (x)?"
+				checked={showCloseButton}
+                onChange={(newValue) =>
+                  setAttributes({ showCloseButton: newValue })
+                }
+				help={
+					showCloseButton
+						? 'Yes.'
+						: 'No.'
+				}
               />
             </PanelBody>
           </InspectorControls>

@@ -17,7 +17,7 @@ return array(
 			'html' => false,
 			'anchor' => true
 		),
-		'textdomain' => 'gw-fse-block-popup',
+		'textdomain' => 'GW_FSE_Block_Popup',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -27,6 +27,10 @@ return array(
 			'blurBackground' => array(
 				'type' => 'number',
 				'default' => 0
+			),
+			'showCloseButton' => array(
+				'type' => 'boolean',
+				'default' => true
 			)
 		)
 	)
